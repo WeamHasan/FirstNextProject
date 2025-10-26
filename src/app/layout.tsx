@@ -20,16 +20,6 @@ export default function RootLayout({
             textAlign: "center",
         }}
         >Header</header>
-        <nav style={{
-          display: "flex",
-          justifyContent: "space-around",
-          backgroundColor: "#aaa",
-          padding: "1rem",
-          marginTop: "1rem",
-        }}>
-          <Link href="/">Home</Link>
-          <Link href="/products">Products</Link>
-        </nav>
         {children}
         <footer
         style={{
