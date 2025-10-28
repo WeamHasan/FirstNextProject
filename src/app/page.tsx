@@ -7,7 +7,11 @@ export default function Home() {
                 <h1 className="text-4xl font-bold text-blue-600 mb-4">
                     Homepage
                 </h1>
-                <p className="text-gray-700">Welcome to my Next.js app!</p>
+                <div className="flex flex-row gap-4 items-center justify-center">
+                    <Link href="/products" className="">Products</Link>
+                    <Link href="articles/breaking-news-123?lang=en">Read in English</Link>
+                    <Link href="articles/breaking-news-123?lang=ar">Read in Arabic</Link>
+                </div>
             </div>
         </>
     )
