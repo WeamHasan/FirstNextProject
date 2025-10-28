@@ -1,3 +1,62 @@
+// "use client"
+
+// import { useState, useEffect } from "react";
+// import Link from "next/link";
+
+// export default function ProductDetailsLayout({
+//     children,
+// }: {
+//     children: React.ReactNode;
+// }) {
+//     const [count, setCount] = useState(0);
+//     const [isLoaded, setIsLoaded] = useState(false);
+
+//     useEffect(() => {
+//         // Load from localStorage
+//         const saved = localStorage.getItem('productCounter');
+//         if (saved) {
+//             setCount(parseInt(saved));
+//         }
+//         setIsLoaded(true);
+//     }, []);
+
+//     const handleIncrement = () => {
+//         const newCount = count + 1;
+//         setCount(newCount);
+//         localStorage.setItem('productCounter', newCount.toString());
+//     };
+
+//     return (
+//         <div className="flex">
+//             <aside className="w-1/6 bg-gray-300 p-4">
+//                 <h3>Sidebar</h3>
+//                 {/* Only show button after localStorage is loaded */}
+//                 {!isLoaded ? (
+//                     <button disabled>Loading...</button>
+//                 ) : (
+//                     <button onClick={handleIncrement} className="bg-blue-500 text-white p-2 rounded hover:bg-blue-600 transition-colors duration-200 ease-in-out cursor-pointer">Count: {count}</button>
+//                 )}
+
+//                 <div className="flex flex-col justify-around bg-gray-300 p-4">
+//                     <Link href="/products/1">Product 1</Link>
+//                     <Link href="/products/2">Product 2</Link>
+//                     <Link href="/products/3">Product 3</Link>
+//                     <Link href="/products/100">Product 100</Link>
+//                     <Link href="/products/101">Product 101</Link>
+//                     <Link href="/products/102">Product 102</Link>
+//                 </div>
+//                 <nav className="flex flex-col justify-around bg-gray-300 p-4">
+//                     <Link href="/">Home</Link>
+//                 </nav>
+//             </aside>
+//             <main className="flex-1">
+//                 {children}
+//             </main>
+//         </div>
+//     )
+// }
+
+
 "use client"
 
 import { useState, useEffect } from "react";
@@ -12,7 +71,6 @@ export default function ProductDetailsLayout({
     const [isLoaded, setIsLoaded] = useState(false);
 
     useEffect(() => {
-        // Load from localStorage
         const saved = localStorage.getItem('productCounter');
         if (saved) {
             setCount(parseInt(saved));
@@ -27,45 +85,86 @@ export default function ProductDetailsLayout({
     };
 
     return (
-        <div style={{ display: "flex" }}>
-            <aside style={{ width: "200px", background: "lightgray", padding: "1rem" }}>
-                <h3>Sidebar</h3>
-                {/* Only show button after localStorage is loaded */}
+        <div className="flex min-h-screen">
+            {/* Sidebar */}
+            <aside className="w-52 bg-gray-300 p-4 space-y-4">
+                {/* Sidebar Header */}
+                <h3 className="text-lg font-semibold text-gray-800">Sidebar</h3>
+                
+                {/* Counter Button */}
                 {!isLoaded ? (
-                    <button disabled>Loading...</button>
+                    <button 
+                        disabled 
+                        className="w-full bg-gray-400 text-gray-600 p-2 rounded cursor-not-allowed"
+                    >
+                        Loading...
+                    </button>
                 ) : (
-                    <button onClick={handleIncrement}>Count: {count}</button>
+                    <button 
+                        onClick={handleIncrement}
+                        className="w-full bg-blue-500 text-white p-2 rounded 
+                                   hover:bg-blue-600 active:bg-blue-700
+                                   transition-colors duration-200 
+                                   font-medium shadow-sm hover:shadow-md"
+                    >
+                        Count: {count}
+                    </button>
                 )}
 
-                <div style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "space-around",
-                    alignItems: "center",
-                    flexWrap: "wrap",
-                    backgroundColor: "#aaa",
-                    padding: "1rem",
-                    marginTop: "1rem",
-                }}>
-                    <Link href="/products/1">Product 1</Link>
-                    <Link href="/products/2">Product 2</Link>
-                    <Link href="/products/3">Product 3</Link>
-                    <Link href="/products/100">Product 100</Link>
-                    <Link href="/products/101">Product 101</Link>
-                    <Link href="/products/102">Product 102</Link>
-                </div>
-                <nav style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "space-around",
-                    backgroundColor: "#aaa",
-                    padding: "1rem",
-                    marginTop: "1rem",
-                }}>
-                    <Link href="/">Home</Link>
+                {/* Product Links */}
+                <nav className="flex flex-col space-y-2 bg-gray-400 p-4 rounded">
+                    <h4 className="font-medium text-gray-800 mb-2">Products</h4>
+                    <Link 
+                        href="/products/1" 
+                        className="text-blue-700 hover:text-blue-900 hover:underline"
+                    >
+                        Product 1
+                    </Link>
+                    <Link 
+                        href="/products/2"
+                        className="text-blue-700 hover:text-blue-900 hover:underline"
+                    >
+                        Product 2
+                    </Link>
+                    <Link 
+                        href="/products/3"
+                        className="text-blue-700 hover:text-blue-900 hover:underline"
+                    >
+                        Product 3
+                    </Link>
+                    <Link 
+                        href="/products/100"
+                        className="text-blue-700 hover:text-blue-900 hover:underline"
+                    >
+                        Product 100
+                    </Link>
+                    <Link 
+                        href="/products/101"
+                        className="text-blue-700 hover:text-blue-900 hover:underline"
+                    >
+                        Product 101
+                    </Link>
+                    <Link 
+                        href="/products/102"
+                        className="text-blue-700 hover:text-blue-900 hover:underline"
+                    >
+                        Product 102
+                    </Link>
+                </nav>
+
+                {/* Home Link */}
+                <nav className="pt-4 border-t border-gray-400">
+                    <Link 
+                        href="/" 
+                        className="text-blue-700 hover:text-blue-900 hover:underline font-medium"
+                    >
+                        ← Back to Home
+                    </Link>
                 </nav>
             </aside>
-            <main style={{ flex: 1 }}>
+
+            {/* Main Content */}
+            <main className="flex-1 p-6 bg-gray-50">
                 {children}
             </main>
         </div>
