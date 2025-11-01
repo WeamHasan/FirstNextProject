@@ -22,6 +22,9 @@ export default function RootLayout({
           <Link href="/products" className="hover:text-blue-500">
             Products
           </Link>
+          <Link href="/blog" className="hover:text-blue-500">
+            Blog
+          </Link>
         </nav>
         {children}
         <footer className="bg-pink-300 p-4 text-center">Footer</footer>
