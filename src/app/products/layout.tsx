@@ -166,6 +166,7 @@ export default function ProductDetailsLayout({
             {/* Main Content */}
             <main className="flex-1 p-6 bg-gray-50">
                 {children}
+                <h2 className="text-lg font-bold">Product Reviews</h2>
             </main>
         </div>
     )

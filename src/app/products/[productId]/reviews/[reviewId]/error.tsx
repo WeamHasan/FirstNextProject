@@ -8,8 +8,12 @@ export default function Error({ error, reset }: { error: Error ; reset: () => vo
     const reload = () => {
         startTransition(() => {
             router.refresh();
+            console.log("Refreshed the page");
             reset();
-        })
+            console.log("Reset the error boundary");
+        });
+            
+    
     }
     return (
         <>
