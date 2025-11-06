@@ -5,7 +5,7 @@ export default async function Products() {
     return (
         <div>
         <ul>
-            {products.map((product : any) => (
+            {products.map((product: { id: number }) => (
                 <li key={product.id}>{product.id}</li>
             ))}
         </ul>

@@ -1,5 +1,6 @@
 import "./globals.css";
 import Link from "next/link";
+import { ErrorWrapper } from "./error-wrapper";
 
 export const metadata = {
   title: "Next.js",
@@ -26,7 +27,9 @@ export default function RootLayout({
             Blog
           </Link>
         </nav>
-        {children}
+        <ErrorWrapper>
+          {children}
+        </ErrorWrapper>
         <footer className="bg-pink-300 p-4 text-center">Footer</footer>
       </body>
     </html>
