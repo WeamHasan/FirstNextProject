@@ -32,8 +32,8 @@ const ErrorSimulator = ({
 
 export const ErrorWrapper = ({ children }: ErrorWrapperProps) => {
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen py-2">
-            <div className="mb-4 space-x-4">
+        <div className="flex">
+            <div className="">
                 <ErrorSimulator message="Simulated error in root layout"></ErrorSimulator>
             </div>
             {children}

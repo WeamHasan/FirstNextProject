@@ -26,6 +26,9 @@ export default function RootLayout({
           <Link href="/blog" className="hover:text-blue-500">
             Blog
           </Link>
+          <Link href="/complex-dashboard" className="hover:text-blue-500">
+            Complex Dashboard
+          </Link>
         </nav>
         <ErrorWrapper>
           {children}
