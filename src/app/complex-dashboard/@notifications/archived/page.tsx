@@ -4,10 +4,9 @@ import Link from "next/link"
 export default function NotificationsPage() {
     return (
         <Card>
-            <div>Notifications Page</div>
+            <div>Archived Notifications</div>
             <div>
-                <Link href="/complex-dashboard/archived"
-                className="text-blue-500 hover:text-red-600">Archived</Link>
+                <Link href="/complex-dashboard/" className="text-blue-500 hover:text-red-600">Default</Link>
             </div>
         </Card>
 
