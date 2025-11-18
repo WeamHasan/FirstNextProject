@@ -1,6 +1,5 @@
 import "./globals.css";
-import Link from "next/link";
-import { ErrorWrapper } from "./error-wrapper";
+import RootLayoutClient from "./layout-client";
 
 export const metadata = {
   title: "Next.js",
@@ -15,25 +14,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <header className="bg-blue-300 p-4 text-center">Header</header>
-        <nav className="flex justify-around bg-gray-300 p-4 mt-4">
-          <Link href="/" className="hover:text-blue-500">
-            Home
-          </Link>
-          <Link href="/products" className="hover:text-blue-500">
-            Products
-          </Link>
-          <Link href="/blog" className="hover:text-blue-500">
-            Blog
-          </Link>
-          <Link href="/complex-dashboard" className="hover:text-blue-500">
-            Complex Dashboard
-          </Link>
-        </nav>
-        <ErrorWrapper>
-          {children}
-        </ErrorWrapper>
-        <footer className="bg-pink-300 p-4 text-center">Footer</footer>
+        <RootLayoutClient>{children}</RootLayoutClient>
       </body>
     </html>
   );
