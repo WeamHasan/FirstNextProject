@@ -48,33 +48,33 @@ export default function RootLayout({
         <nav>
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="text-2xl font-bold m-4 p-2 bg-gray-300 rounded-md md:hidden"
+            className="text-2xl font-bold m-4 p-2 bg-blue-300 rounded-md md:hidden"
           >
             ☰
           </button>
           {isMenuOpen && (
-            <div className="flex flex-col gap-3 mt-4 p-4 bg-gray-200 md:hidden">
+            <div className="flex flex-col gap-3 mt-4 p-4 bg-amber-100 md:hidden">
               <Link
                 href="/"
-                className="hover:text-blue-500 block py-2 transition"
+                className="hover:text-blue-500 text-rose-600 block py-2 transition"
               >
                 Home
               </Link>
               <Link
                 href="/products"
-                className="hover:text-blue-500 block py-2 transition"
+                className="hover:text-blue-500 text-rose-600 block py-2 transition"
               >
                 Products
               </Link>
               <Link
                 href="/blog"
-                className="hover:text-blue-500 block py-2 transition"
+                className="hover:text-blue-500 text-rose-600 block py-2 transition"
               >
                 Blog
               </Link>
               <Link
                 href="/complex-dashboard"
-                className="hover:text-blue-500 block py-2 transition"
+                className="hover:text-blue-500 text-rose-600 block py-2 transition"
               >
                 Complex Dashboard
               </Link>

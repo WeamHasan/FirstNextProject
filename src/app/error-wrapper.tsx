@@ -22,7 +22,7 @@ const ErrorSimulator = ({
     return (
         <button
             onClick={() => setHasError(true)}
-            className="px-4 py-2 bg-red-500 text-white rounded"
+            className="px-4 py-2 bg-rose-500 text-white rounded"
         >
             Simulate Error
         </button>
