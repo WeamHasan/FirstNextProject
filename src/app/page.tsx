@@ -9,8 +9,10 @@ export default function Home() {
                 </h1>
                 <div className="flex flex-row gap-4 items-center justify-center">
                     <Link href="/products" className="">Products</Link>
-                    <Link href="articles/breaking-news-123?lang=en">Read in English</Link>
-                    <Link href="articles/breaking-news-123?lang=ar">Read in Arabic</Link>
+                    <Link href="articles/breaking-news-123?lang=en">read in English</Link>
+                    <Link href="articles/breaking-news-123?lang=ar">read in Arabic</Link>
+                    
+                    
                 </div>
             </div>
         </>
