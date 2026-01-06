@@ -83,7 +83,7 @@ export default function RootLayout({
         </nav>
 
         <ErrorWrapper>{children}</ErrorWrapper>
-        <footer className="bg-pink-300 p-4 text-center text-sm md:text-base">
+        <footer className="bg-rose-300 p-4 text-center text-sm md:text-base">
           <p>© 2025 My App. All rights reserved.</p>
         </footer>
       </body>

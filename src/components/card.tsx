@@ -3,7 +3,7 @@
 export const Card = ({ children }: { children: React.ReactNode }) => {
     return (
       <div className="
-      w-full bg-white 
+      w-full bg-rose-100 
       border border-gray-200 rounded-lg
       shadow-sm hover:shadow-lg
       transition-all duration-300 ease-in-out
